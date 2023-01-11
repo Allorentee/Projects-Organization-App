@@ -8,6 +8,11 @@ Simple API REST
 ```
 https://github.com/Allorentee/Sequalize-PostgreSQL
 ```
+## INSTALACION DE DEPENDENCIAS.
+
+```
+npm init
+```
 
 ## RUN SERVER - DEV MODE
 
