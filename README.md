@@ -11,7 +11,7 @@ https://github.com/Allorentee/Sequalize-PostgreSQL
 ## INSTALACION DE DEPENDENCIAS.
 
 ```
-npm init
+npm i
 ```
 
 ## RUN SERVER - DEV MODE
