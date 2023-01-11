@@ -1,6 +1,6 @@
+import { sequelize } from './database/database.js';
 import { app } from './app.js';
 import createDebug from 'debug';
-import { sequelize } from './database/database.js';
 const debug = createDebug('SQL');
 
 async function main() {
