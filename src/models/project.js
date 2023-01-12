@@ -1,9 +1,12 @@
 import { DataTypes } from 'sequelize';
 import { sequelize } from '../database/database.js';
+import { Task } from './task.js';
 
 //Define tablas, 2 propiedadees: 1-Nombre de la tabla, 2: Objeto donde definimos la columnas de la tabla
-sequelize.define(
-  'proyect',
+
+// definimos el modelo en letra mayuscula
+export const Project = sequelize.define(
+  'project',
   {
     id: {
       type: DataTypes.INTEGER,
@@ -22,7 +25,18 @@ sequelize.define(
   },
   //Opciones de la tabla
   {
-    tablename: 'proyects',
     timestamps: true,
   }
 );
+
+//Le decimos que un proyecto tiene muchas tareas, La relaccion enttre tablas las colocamos aqui en el hash many
+Project.hasMany(Task, {
+  foreignKey: 'projectId',
+  sourceKey: 'id',
+});
+
+//Le decimos que cada tarea le pertenece a l proyect id.
+Task.belongsTo(Project, {
+  foreignKey: 'projectId',
+  targetId: 'id',
+});

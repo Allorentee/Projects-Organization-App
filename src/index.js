@@ -1,13 +1,14 @@
 import { sequelize } from './database/database.js';
 import { app } from './app.js';
 import createDebug from 'debug';
-import './models/proyect.js';
+import './models/project.js';
+import './models/task.js';
 const debug = createDebug('SQL');
 
 async function main() {
   try {
     //Este ync tiene varias formas de trabajar,
-    await sequelize.sync(true);
+    await sequelize.sync({ force: true });
     debug('Connection has been established successfully.');
     app.listen(3000);
     debug('DB -> ' + 'http://localhost:3000');
