@@ -1,7 +1,5 @@
 import { sequelize } from './database/database.js';
 import { app } from './app.js';
-import createDebug from 'debug';
-const debug = createDebug('SQL');
 
 async function main() {
   try {
