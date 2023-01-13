@@ -1,6 +1,6 @@
 # Full project Focus ToDo
 
-## Tecnologies Backend
+## Technologies Backend
 
 - Javascript
 - NodeJs
@@ -9,4 +9,6 @@
 - PostgreSQL
 - SQL
 
-## Tecnologies FrontEnd
+## Technologies FrontEnd
+
+Working in progress...
