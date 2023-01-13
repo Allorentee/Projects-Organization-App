@@ -9,4 +9,4 @@ app.use(express.json());
 app.get('/', (_req, res) => {
   res.send('API Express / projects or tasks').end();
 });
-app.use('/', route);
+app.use(route);

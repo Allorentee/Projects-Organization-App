@@ -10,6 +10,15 @@ export class ProjectsController {
     }
   }
 
+  async getProject(req, res) {
+    try {
+      const project = await Project.findOne({ where: { id: req.params.id } });
+      res.status(200).json(project);
+    } catch (error) {
+      res.status(500).json({ message: error.message });
+    }
+  }
+
   async createProjects(req, res) {
     const { name, priority, description } = req.body;
 
