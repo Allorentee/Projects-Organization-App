@@ -1,5 +1,6 @@
 import express from 'express';
-import { route } from './routes/projects.routes.js';
+import { projectsRoutes } from './routes/projects.routes.js';
+import { tasksRoutes } from './routes/task.routes.js';
 
 export const app = express();
 
@@ -9,4 +10,5 @@ app.use(express.json());
 app.get('/', (_req, res) => {
   res.send('API Express / projects or tasks').end();
 });
-app.use(route);
+app.use(projectsRoutes);
+app.use(tasksRoutes);
