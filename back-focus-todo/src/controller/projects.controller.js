@@ -1,4 +1,5 @@
 import { Project } from '../models/project.js';
+import { Task } from '../models/task.js';
 
 export class ProjectsController {
   async getProjects(req, res) {
@@ -68,6 +69,16 @@ export class ProjectsController {
       project.priority = 2;
       await project.save();
       res.status(200).json(project);
+    } catch (error) {
+      res.status(500).json({ message: error.message });
+    }
+  }
+
+  async getProjectTask(req, res) {
+    try {
+      const { id } = req.params;
+      const projectTask = await Task.findAll({ where: { projectId: id } });
+      res.status(200).json(projectTask);
     } catch (error) {
       res.status(500).json({ message: error.message });
     }

@@ -19,9 +19,13 @@ export class tasksController {
     }
   }
 
-  async postTask(req, res) {
+  async createTask(req, res) {
     try {
-      const newTask = Task.create(req.body);
+      const newTask = await Task.create({
+        name: req.body.name,
+        done: req.body.done,
+        projectId: req.body.projectId,
+      });
       res.status(200).json(newTask);
     } catch (error) {
       res.status(500).json({ message: error.message });
@@ -30,8 +34,10 @@ export class tasksController {
 
   async deleteTask(req, res) {
     try {
-      await Task.destroy({ where: { id: req.params.id } });
-      res.status(204);
+      const destroyedTask = await Task.destroy({
+        where: { id: req.params.id },
+      });
+      res.status(200).json(destroyedTask);
     } catch (error) {
       res.status(500).json({ message: error.message });
     }
@@ -39,10 +45,12 @@ export class tasksController {
 
   async updateTask(req, res) {
     try {
-      const task = await Task.update(req.body, {
+      const task = await Task.findOne({
         where: { id: req.params.id },
       });
-
+      //Con el set podemos solo seleccionar algunos campos en vez de todos.
+      task.set(req.body);
+      await task.save();
       res.status(200).json(task);
     } catch (error) {
       res.status(500).json({ message: error.message });
