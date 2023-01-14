@@ -1,4 +1,4 @@
-import { sequelize } from './database/database.js';
+import { dbConnect } from './database/db.connect.js';
 import { app } from './app.js';
 import http from 'http';
 
@@ -18,15 +18,4 @@ server.on('listening', () => {
   console.log(`Listening ${bind}`);
 });
 
-async function main() {
-  try {
-    await sequelize.sync({ force: true });
-    //Este ync tiene varias formas de trabajar,
-    console.log('Connection has been established successfully.');
-    app.listen(3000);
-    console.log('DB -> ' + 'http://localhost:3000');
-  } catch (error) {
-    console.error('Unable to connect to the database:', error);
-  }
-}
-main();
+dbConnect();
