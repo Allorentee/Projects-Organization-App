@@ -17,6 +17,7 @@ export const Project = sequelize.define(
     },
     priority: {
       type: DataTypes.INTEGER,
+      defaultValue: 10,
     },
     description: {
       type: DataTypes.STRING,
