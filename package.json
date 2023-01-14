@@ -1,0 +1,30 @@
+{
+  "name": "focus-todo",
+  "version": "1.0.0",
+  "description": "- Javascript\r - NodeJs\r - Express\r - Sequelize\r - PostgreSQL\r - SQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Allorentee/Sequalize-PostgreSQL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Allorentee/Sequalize-PostgreSQL/issues"
+  },
+  "eslintConfig": {
+    "extends": "standard,prettier"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "homepage": "https://github.com/Allorentee/Sequalize-PostgreSQL#readme",
+  "dependencies": {
+    "eslint-config-prettier": "^8.6.0",
+    "standard": "^17.0.0"
+  }
+}
