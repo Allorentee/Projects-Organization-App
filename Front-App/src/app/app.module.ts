@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProjectsComponent } from './projects/projects/projects.component';
 
 @NgModule({
   //Componentes directivas y pipes
-  declarations: [AppComponent,HeaderComponent],
+  declarations: [AppComponent,HeaderComponent, ProjectsComponent],
   //Otros modulos
   imports: [BrowserModule, AppRoutingModule],
   //Exportados hace que los elementos declarados se puedan exportar a otros modulos.
