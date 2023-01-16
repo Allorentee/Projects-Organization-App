@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
+import { MenuComponent } from './pages/components/menu.component';
 
 @NgModule({
   //Componentes directivas y pipes
@@ -13,6 +14,7 @@ import { HomeComponent } from './pages/home/home.component';
     HeaderComponent,
     ProjectsComponent,
     HomeComponent,
+    MenuComponent,
   ],
   //Otros modulos
   imports: [BrowserModule, AppRoutingModule],
