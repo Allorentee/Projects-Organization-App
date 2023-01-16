@@ -1,0 +1,18 @@
+.navBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 10px;
+  font-family: 'Anton', sans-serif;
+  .navBar__item {
+    padding: 0px 10px;
+  }
+  .navBar__link {
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  .navBar__link:hover {
+    color: royalblue;
+  }
+}

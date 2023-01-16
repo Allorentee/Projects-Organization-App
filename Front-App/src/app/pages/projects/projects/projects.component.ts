@@ -2,14 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
-  template: `
-    <p>
-      projects works!
-    </p>
-  `,
-  styles: [
-  ]
+  template: `<h1>Projects</h1>`,
+  styles: [],
 })
-export class ProjectsComponent {
-
-}
+export class ProjectsComponent {}
