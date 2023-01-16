@@ -1,5 +1,4 @@
 import { CoreModule } from './components/core.module';
-import { ProjectsComponent } from './pages/projects/projects.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -9,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   //Componentes directivas y pipes
-  declarations: [AppComponent, ProjectsComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent],
   //Otros modulos
   imports: [BrowserModule, AppRoutingModule, CoreModule, HttpClientModule],
   //Exportados hace que los elementos declarados se puedan exportar a otros modulos.
