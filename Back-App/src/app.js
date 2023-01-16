@@ -4,10 +4,12 @@ import { corsOptions } from './cors/corsOptions.js';
 import { projectsRoutes } from './routes/projects.routes.js';
 import { tasksRoutes } from './routes/task.routes.js';
 import { setCors } from './cors/setCors.js';
+import morgan from 'morgan';
 
 export const app = express();
 app.disable('x-powered-by');
 
+//Morgan nos proporciona informacion sobre las peticiones que recibimos
 app.use(morgan('dev'));
 app.use(cors(corsOptions));
 app.use(express.json());
