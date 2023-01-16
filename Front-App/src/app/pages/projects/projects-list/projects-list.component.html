@@ -1,1 +1,21 @@
-<p>projects-list works!</p>
+<ng-container>
+  <div *ngIf="loading; else errorTpl" class="spinner">
+    <app-spinner></app-spinner>
+  </div>
+  <section>
+    <ng-template #errorTpl>
+      <p *ngIf="error; else projectsList">
+        An error occured while fetching users
+      </p>
+    </ng-template>
+    <ng-template #projectsList>
+      <ul *ngIf="projects.length > 0">
+        <li *ngFor="let project of projects">
+          <h2>{{ project.name }}</h2>
+          <span>{{ project.priority }}</span>
+          <p>{{ project.description }}</p>
+        </li>
+      </ul>
+    </ng-template>
+  </section>
+</ng-container>
