@@ -5,14 +5,14 @@
   list-style-type: none;
   padding: 10px;
   font-family: 'Anton', sans-serif;
-  .navBar__item {
+  &__item {
     padding: 0px 10px;
   }
-  .navBar__link {
+  &__link {
     text-decoration: none;
     font-size: 1.5rem;
   }
-  .navBar__link:hover {
+  &__link:hover {
     color: royalblue;
   }
 }
