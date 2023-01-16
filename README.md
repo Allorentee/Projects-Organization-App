@@ -11,4 +11,9 @@
 
 ## Technologies FrontEnd
 
-Working in progress...
+- Typescript
+- Angular
+- Sass
+- Jasmine
+
+[Web Page Working in progress...](https://projects-organization-app.vercel.app/home)
