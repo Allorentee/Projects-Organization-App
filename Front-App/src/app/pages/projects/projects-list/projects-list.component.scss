@@ -4,3 +4,34 @@
   width: 70%;
   margin: auto;
 }
+.projects {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  &__items {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(75, 150, 173);
+    list-style-type: none;
+    padding: 20px;
+    max-width: 250px;
+    cursor: pointer;
+    &:hover {
+      background-color: lightskyblue;
+      &__tittle {
+        color: #333;
+      }
+    }
+  }
+  &__tittle {
+    font-size: 1.5rem;
+    font-family: 'Anton', sans-serif;
+    color: rgb(2, 2, 2);
+    margin-bottom: 10px;
+  }
+  &__description {
+    color: #333;
+    word-wrap: break-word;
+  }
+}
