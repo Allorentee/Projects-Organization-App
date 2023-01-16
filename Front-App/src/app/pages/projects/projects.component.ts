@@ -10,13 +10,18 @@ import { Project } from 'src/app/services/interface/project';
 export class ProjectsComponent implements OnInit {
   projects!: Project[];
   error!: Error;
-  constructor(public projectService: ProjectService) {}
-  ngOnInit() {
+  constructor(public projectService: ProjectService) {
     this.projectService.getAllProjects().subscribe({
       next: (data) => {
+        console.log(data);
         this.projects = data;
+        console.log(this.projects);
       },
-      error: (error) => (this.error = error),
+      error: (error) => (console.log(this.projects), (this.error = error)),
     });
+  }
+  ngOnInit() {
+    this.projects = [];
+    console.log(this.projects);
   }
 }
