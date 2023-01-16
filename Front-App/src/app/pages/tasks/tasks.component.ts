@@ -2,14 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-tasks',
-  template: `
-    <p>
-      tasks works!
-    </p>
-  `,
-  styles: [
-  ]
+  template: ` <app-menu></app-menu> `,
+  styles: [],
 })
-export class TasksComponent {
-
-}
+export class TasksComponent {}

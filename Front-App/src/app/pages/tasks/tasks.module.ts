@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { TasksComponent } from './tasks.component';
+import { CoreModule } from 'src/app/components/core.module';
 
 @NgModule({
   declarations: [TasksComponent],
-  imports: [CommonModule, TasksRoutingModule],
+  imports: [CommonModule, TasksRoutingModule, CoreModule],
 })
 export class TasksModule {}

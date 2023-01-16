@@ -1,3 +1,4 @@
+import { CoreModule } from './../../components/core.module';
 import { ProjectsComponent } from './projects.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -7,6 +8,6 @@ import { ProjectsListComponent } from './projects-list/projects-list.component';
 
 @NgModule({
   declarations: [ProjectsComponent, ProjectsListComponent],
-  imports: [CommonModule, ProjectsRoutingModule],
+  imports: [CommonModule, ProjectsRoutingModule, CoreModule],
 })
 export class ProjectsModule {}
