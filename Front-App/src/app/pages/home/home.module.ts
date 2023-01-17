@@ -1,7 +1,7 @@
 import { HomeComponent } from './home.component';
-import { CoreModule } from './../../components/core.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CoreModule } from 'src/app/shared/core.module';
 
 @NgModule({
   declarations: [HomeComponent],
