@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { SwitchModalService } from '../switch-modal.service';
 
 @Component({
@@ -6,11 +6,12 @@ import { SwitchModalService } from '../switch-modal.service';
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss'],
 })
-export class AddProjectModal implements OnInit {
-  constructor(private modalSwitchService: SwitchModalService) {}
-  ngOnInit(): void {}
-
+export class AddProjectModal {
+  public modalSwitch = false;
   closeModal() {
-    this.modalSwitchService.$modal.emit(false);
+    this.modalSwitch = false;
+  }
+  openModal() {
+    this.modalSwitch = true;
   }
 }

@@ -1,5 +1,9 @@
-<div class="modal">
-  <input type="text" name="tittl" placeholder="Add tittle project" />
-  <button type="submit" class="button">Create</button>
-  <button class="closeModal" (click)="(closeModal)">❌</button>
-</div>
+<ng-container *ngIf="modalSwitch" class="modalSpace">
+  <div class="modal">
+    <div class="modalc-content">
+      <input type="text" name="tittl" placeholder="Add tittle project" />
+      <button type="submit" class="button">Create</button>
+      <button class="closeModal" (click)="closeModal()">❌</button>
+    </div>
+  </div>
+</ng-container>

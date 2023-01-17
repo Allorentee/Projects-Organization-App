@@ -1,7 +1,7 @@
 <header>
   <nav>
     <ul class="navBar">
-      <li class="navBar__button" (click)="openModal()">ADD PROJECT</li>
+      <li class="navBar__button" (click)="modal.openModal()">ADD PROJECT</li>
       <li class="navBar__item">
         <a
           [routerLink]="['/projects']"
@@ -31,6 +31,7 @@
     </ul>
   </nav>
 </header>
-<ng-container *ngIf="modalSwitch == true">
-  <app-modal></app-modal>
+
+<ng-container>
+  <app-modal #modal></app-modal>
 </ng-container>
